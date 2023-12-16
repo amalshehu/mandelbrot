@@ -20,19 +20,21 @@ The `mandelbrot` project is an interactive visualization of the Mandelbrot set, 
 
 ## Fractal Gallery 🖼️
 
-![Zoom Level 1](public/1.jpg)
+![Zoom Level 1](js/public/1.jpg)
 
-## Installation 💾
+## JavaScript (JS) Version 🌐
+
+### Installation 💾
 
 Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/amalshehu/mandelbrot.git
-cd mandelbrot
+cd mandelbrot/js
 pnpm install
 ```
 
-## Running the Application 🖥️
+### Running the Application 🖥️
 
 Start the application locally:
 
@@ -42,10 +44,70 @@ pnpm dev
 
 Open `http://localhost:3000` in your browser to explore the Mandelbrot set.
 
-## Usage 🛠️
+### Usage 🛠️
 
 - **Pan:** 🚶‍♂️ Click and drag or use arrow keys to navigate.
 - **Zoom:** 🔍 Use the mouse wheel or zoom slider to adjust the view.
+
+## Rust Version 🦀
+
+### Getting Started
+
+#### Dependencies
+
+Before running the application, ensure you have the following dependencies installed:
+
+- Rust programming language
+- Rust dependencies specified in `Cargo.toml`
+- Vulkan or Metal-supported GPU
+
+#### Running the Application
+
+To run the application, execute the following commands in your terminal:
+
+```shell
+$ cd mandelbrot/rust
+$ cargo build --release
+$ cargo run
+```
+
+### Features
+
+#### Real-time Visualization
+
+- 🌀 Real-time rendering of the Mandelbrot Set.
+- 🌈 Colorful visualization based on the Mandelbrot fractal.
+
+#### Zoom and Pan
+
+- 🔍 Zoom in and out with mouse input.
+- 📌 Pan the Mandelbrot Set to explore different regions.
+
+#### Adaptive Resolution
+
+- 🖥️ Automatically adjusts rendering resolution upon window resizing.
+- 🔄 Redraws the Mandelbrot Set with the updated resolution.
+
+### Shader Explanation
+
+The Mandelbrot Set visualization relies on two shaders, **vertex shader** and **fragment shader**, which are responsible for rendering the fractal.
+
+#### Vertex Shader (vs_main)
+
+- 🎯 Calculates the position of vertices in normalized device coordinates.
+- 🧩 Transforms vertex positions.
+
+#### Fragment Shader (fs_main)
+
+- 🖌️ Generates colors for each fragment using the Mandelbrot algorithm.
+- 🌟 Iteratively calculates the Mandelbrot fractal and assigns colors based on iterations.
+
+### Interactivity
+
+#### Zoom and Pan
+
+- 🖱️ Left-click and drag to zoom in/out.
+- 🌍 Pan the Mandelbrot Set by moving the mouse.
 
 ## License 📜
 
